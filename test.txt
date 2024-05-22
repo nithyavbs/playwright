@@ -1,0 +1,33 @@
+ Steps to be followed to setup BDD Framework:
+
+1. Create a Maven Project
+
+2. Add dependencies - Selenium java, webdrivermanager(optional), cucumber-java, junit, cucumber-junit 
+
+3. Create Features folder in src/test/resources
+
+4. Create a new feature file. extension is .feature
+
+5. Install Cucumber Eclipse plug-in or natural plug-in and Restart the eclipse.
+
+6. Create a new feature file to get all the options
+
+7. Write Scenarios in feature file
+
+8. Run the feature file
+
+9. Create step definition class or glue code under src/test/java package
+
+10. Create a runner package/class
+
+@RunWith(Cucumber.class) 
+
+@CucumberOptions(features="src/test/resources/Features",glue={"com.stepDefinition"})
+
+
+Feature:  Check Login Functionality 
+Scenario: 
+Given the login screen is opened
+When user enters username and password
+And clicks on Login button
+Then user should be navigated to Home Page.
